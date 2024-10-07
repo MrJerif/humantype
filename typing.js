@@ -172,7 +172,7 @@ function calculateWPM() {
     const errorRate = Math.round(incorrectWords / minutesPassed);
 
     // Accuracy
-    const totalAccuracy = (correctWords / totalWords) * 100;
+    const totalAccuracy = ((correctWords / totalWords) * 100).toFixed(2); // Display only 2 digits after the decimal point
 
     // Net WPM
     const wpm = Math.round(rawSpeed - errorRate);
